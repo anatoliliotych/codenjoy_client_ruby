@@ -7,7 +7,7 @@ class Glass
   # Glass state is initalized with empty cells.
   # Glass cell can be busy('*' - star) or empty(' ' - space)
   def initialize
-    @state = prepare_glass_data(' '*200)
+    @state = prepare_glass_data(' '*25)
   end
 
   # update Glass state
@@ -18,7 +18,7 @@ class Glass
   # prepare glass data
   def prepare_glass_data(raw_glass)
     res = []
-    raw_glass.split('').each_slice(10) { |e| res << e }
+    raw_glass.split('').each_slice(5) { |e| res << e }
     res
   end
 
